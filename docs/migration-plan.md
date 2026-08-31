@@ -13,15 +13,13 @@ The primary case combines operational-data clustering from `Operation-aware-airc
 | 5 | ADflow validation and mission-level evaluation | operation-aware CFD/mission modules |
 | 6 | Tecplot and publication-figure recipes | Tecplot visualization templates |
 
-## Comparison cases
+## Method organization
 
-- `CRM_CFD_FFD`: single- and nine-point FFD optimization.
-- `CRM_CFD_Mode`: mode-based CRM parameterization and optimization.
-- `CRM_Data-driven`: single-fidelity data-driven optimization.
-- `CRM_Multifidelity`: multifidelity surrogate optimization without operational clustering.
-- `CRM_Operation-aware`: operation-aware CFD optimization without multifidelity surrogate modelling.
-- `ADODG_Benchmarks`, `BWB`, and `Airfoil_2D`: benchmark and teaching cases.
+- `CFD-opt/` contains CFD-based CRM FFD/mode optimization, ADflow analysis, ADODG, BWB, airfoil, adjoint, MPhys, and operation-aware CFD workflows.
+- `Data-opt/` contains single-fidelity and multifidelity surrogate workflows, operation-data clustering and mission analysis, EGO, and the integrated Multifidelity Operation-aware configuration.
+- `Geometric_parameterization/` contains FFD setup helpers and distinct mode-based implementations retained for their required MACH-Aero/pyGeo compatibility.
+- `viz/` contains all Tecplot visualization resources.
 
-## Migration rule
+## Porting rule
 
-Port a legacy script only after replacing absolute paths with configuration, declaring its external MACH-Aero/ADflow requirements, and adding a small smoke test or documented dry-run. Until then retain it under `legacy/` with source provenance rather than exposing it as a supported case.
+Before presenting a script as a portable entry point, replace absolute paths with configuration and asset IDs, declare its MACH-Aero/ADflow requirements, and add a smoke test or documented dry-run.
