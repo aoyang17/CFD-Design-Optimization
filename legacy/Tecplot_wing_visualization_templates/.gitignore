@@ -1,0 +1,35 @@
+.DS_Store
+._*
+__MACOSX/
+
+# Local-only assets: CFD data, rendered images/PDFs, full archives, frame sequences.
+large_assets/
+
+# Tecplot and CFD data should stay out of the code repository unless explicitly curated.
+*.cgns
+*.dat
+*.plt
+*.szplt
+*.h5
+*.hdf5
+*.q
+*.hst
+*.out
+
+# Rendered media and heavy packaged outputs.
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.bmp
+*.gif
+*.mp4
+*.mov
+*.avi
+*.pdf
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z

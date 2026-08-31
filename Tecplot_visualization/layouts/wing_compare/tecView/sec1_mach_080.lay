@@ -1,0 +1,382 @@
+#!MC 1410
+$!VarSet |LFDSFN1| = '"compare_9ADODG_mach_0.80\fc_000_slices.dat"'
+$!VarSet |LFDSVL1| = '"CoordinateX" "CoordinateY" "CoordinateZ" "XoC" "YoC" "ZoC" "VelocityX" "VelocityY" "VelocityZ" "CoefPressure" "Mach"'
+$!VarSet |LFDSFN2| = '"compare_9CBMission_mach_0.80\fc_000_slices.dat"'
+$!VarSet |LFDSVL2| = '"CoordinateX" "CoordinateY" "CoordinateZ" "XoC" "YoC" "ZoC" "VelocityX" "VelocityY" "VelocityZ" "CoefPressure" "Mach"'
+$!VarSet |LFDSFN3| = '"compare_17ptGMM_mach_0.80\fc_000_slices.dat"'
+$!VarSet |LFDSVL3| = '"CoordinateX" "CoordinateY" "CoordinateZ" "XoC" "YoC" "ZoC" "VelocityX" "VelocityY" "VelocityZ" "CoefPressure" "Mach"'
+$!VarSet |LFDSFN4| = '"compare_9ADODG_mach_0.80\fc_000_slices.dat"'
+$!VarSet |LFDSVL4| = '"CoordinateX" "CoordinateY" "CoordinateZ" "XoC" "YoC" "ZoC" "VelocityX" "VelocityY" "VelocityZ" "CoefPressure" "Mach"'
+$!VarSet |LFDSFN5| = '"compare_9CBMission_mach_0.80\fc_000_slices.dat"'
+$!VarSet |LFDSVL5| = '"CoordinateX" "CoordinateY" "CoordinateZ" "XoC" "YoC" "ZoC" "VelocityX" "VelocityY" "VelocityZ" "CoefPressure" "Mach"'
+$!VarSet |LFDSFN6| = '"compare_17ptGMM_mach_0.80\fc_000_slices.dat"'
+$!VarSet |LFDSVL6| = '"CoordinateX" "CoordinateY" "CoordinateZ" "XoC" "YoC" "ZoC" "VelocityX" "VelocityY" "VelocityZ" "CoefPressure" "Mach"'
+$!SetStyleBase Factory
+$!GlobalPaper 
+  PaperSizeInfo
+    {
+    Letter
+      {
+      Width = 8.5
+      Height = 11
+      LeftHardClipOffset = 0.125
+      RightHardClipOffset = 0.125
+      TopHardClipOffset = 0.125
+      BottomHardClipOffset = 0.125
+      }
+    }
+$!Page 
+  Name = 'Untitled'
+  PaperAttributes
+    {
+    BackgroundColor = White
+    IsTransparent = Yes
+    OrientPortrait = No
+    ShowGrid = Yes
+    ShowRuler = No
+    ShowPaper = No
+    PaperSize = Letter
+    RulerSpacing = OneInch
+    PaperGridSpacing = HalfInch
+    RegionInWorkArea
+      {
+      X1 = 1
+      Y1 = 0.25
+      X2 = 10
+      Y2 = 8.25
+      }
+    }
+### Frame Number 1 ###
+$!ReadDataSet  '|LFDSFN1|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  ResetStyle = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL1|'
+$!RemoveVar |LFDSVL1|
+$!RemoveVar |LFDSFN1|
+$!ReadDataSet  '|LFDSFN2|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  ReadDataOption = Append
+  ResetStyle = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL2|'
+$!RemoveVar |LFDSVL2|
+$!RemoveVar |LFDSFN2|
+$!ReadDataSet  '|LFDSFN3|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  ReadDataOption = Append
+  ResetStyle = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL3|'
+$!RemoveVar |LFDSVL3|
+$!RemoveVar |LFDSFN3|
+$!FrameLayout 
+  ShowBorder = No
+  ShowHeader = No
+  HeaderColor = Red
+  XYPos
+    {
+    X = 1
+    Y = 0.5
+    }
+  Width = 9
+  Height = 5
+$!ThreeDAxis 
+  AspectRatioLimit = 25
+  BoxAspectRatioLimit = 25
+$!PlotType  = XYLine
+$!FrameName  = 'Frame 001'
+$!GlobalTime 
+  SolutionTime = 0
+$!DeleteLineMaps 
+$!ActiveLineMaps  =  [1-2]
+$!GlobalLinePlot 
+  DataLabels
+    {
+    DistanceSkip = 5
+    }
+  Legend
+    {
+    XYPos
+      {
+      X = 95
+      }
+    }
+$!LineMap  [1]
+  Name = 'Map 0'
+  Assign
+    {
+    Zone = 1
+    XAxisVar = 1
+    YAxisVar = 10
+    }
+  Lines
+    {
+    Color = Red
+    PatternLength = 5
+    LineThickness = 1
+    }
+  Symbols
+    {
+    Color = Red
+    FillColor = Red
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [2]
+  Name = 'Map 1'
+  Assign
+    {
+    Zone = 13
+    XAxisVar = 1
+    YAxisVar = 10
+    }
+  Lines
+    {
+    Color = Blue
+    LinePattern = LongDash
+    LineThickness = 1
+    }
+  Symbols
+    {
+    Color = Green
+    FillColor = Green
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!XYLineAxis 
+  DepXToYRatio = 1
+  ViewportPosition
+    {
+    X1 = 10
+    Y1 = 1
+    X2 = 95
+    Y2 = 98
+    }
+  ViewportTopSnapTarget = 98
+$!XYLineAxis 
+  XDetail 1
+    {
+    ShowAxis = No
+    RangeMin = 0.036725979476281249425
+    RangeMax = 1.7043766826844128914
+    GRSpacing = 0.5
+    }
+$!XYLineAxis 
+  YDetail 1
+    {
+    RangeMin = -1.1000000000000000888
+    RangeMax = 0.80000000000000004441
+    IsReversed = Yes
+    GRSpacing = 0.5
+    TickLabel
+      {
+      TextShape
+        {
+        Height = 9
+        }
+      }
+    Title
+      {
+      TitleMode = UseText
+      Text = 'C<sub>P'
+      TextShape
+        {
+        IsBold = No
+        Height = 10
+        }
+      Offset = 5
+      }
+    AxisLine
+      {
+      Color = Custom2
+      }
+    }
+$!AttachText 
+  AnchorPos
+    {
+    X = 50
+    Y = 10
+    }
+  TextShape
+    {
+    FontFamily = 'Times'
+    IsBold = No
+    Height = 40
+    }
+  Text = 'A'
+### Frame Number 2 ###
+$!CreateNewFrame 
+$!ReadDataSet  '|LFDSFN4|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  ResetStyle = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL4|'
+$!RemoveVar |LFDSVL4|
+$!RemoveVar |LFDSFN4|
+$!ReadDataSet  '|LFDSFN5|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  ReadDataOption = Append
+  ResetStyle = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL5|'
+$!RemoveVar |LFDSVL5|
+$!RemoveVar |LFDSFN5|
+$!ReadDataSet  '|LFDSFN6|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  ReadDataOption = Append
+  ResetStyle = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL6|'
+$!RemoveVar |LFDSVL6|
+$!RemoveVar |LFDSFN6|
+$!FrameLayout 
+  ShowBorder = No
+  ShowHeader = No
+  HeaderColor = Red
+  XYPos
+    {
+    X = 1
+    Y = 5.5
+    }
+  Width = 9
+  Height = 1.6
+$!ThreeDAxis 
+  AspectRatioLimit = 25
+  BoxAspectRatioLimit = 25
+$!PlotType  = XYLine
+$!FrameName  = 'Frame 001'
+$!GlobalTime 
+  SolutionTime = 0
+$!DeleteLineMaps 
+$!ActiveLineMaps  =  [1-2]
+$!GlobalLinePlot 
+  DataLabels
+    {
+    DistanceSkip = 5
+    }
+  Legend
+    {
+    XYPos
+      {
+      X = 95
+      }
+    }
+$!LineMap  [1]
+  Name = 'Map 0'
+  Assign
+    {
+    Zone = 1
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Red
+    PatternLength = 10
+    LineThickness = 3
+    }
+  Symbols
+    {
+    Color = Red
+    FillColor = Red
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [2]
+  Name = 'Map 1'
+  Assign
+    {
+    Zone = 13
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Blue
+    LinePattern = LongDash
+    LineThickness = 3
+    }
+  Symbols
+    {
+    Color = Green
+    FillColor = Green
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!XYLineAxis 
+  AxisMode = XYDependent
+  DepXToYRatio = 1
+  ViewportPosition
+    {
+    X1 = 10
+    Y1 = 5
+    X2 = 95
+    Y2 = 95
+    }
+  ViewportTopSnapTarget = 95
+$!XYLineAxis 
+  XDetail 1
+    {
+    ShowAxis = No
+    RangeMin = 0.033073740002084565937
+    RangeMax = 1.7111529775034544087
+    GRSpacing = 0.5
+    }
+$!XYLineAxis 
+  YDetail 1
+    {
+    ShowAxis = No
+    RangeMin = -0.20018354710738259228
+    RangeMax = 0.11569019171640462784
+    GRSpacing = 0.1
+    }
+$!FrameControl ActivateByNumber
+  Frame = 1
+$!SetStyleBase Config

@@ -1,0 +1,46 @@
+# Python and test artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+
+# Local runtime outputs
+runs/
+outputs/
+logs/
+history/
+
+# Large local research assets; track only small, deliberate fixtures.
+large_assets/
+data/
+*.cgns
+*.plt
+*.szplt
+*.h5
+*.hdf5
+*.q
+*.hst
+*.out
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.bmp
+*.gif
+*.mp4
+*.mov
+*.avi
+*.pdf
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# Platform/editor files
+.DS_Store
+._*
+__MACOSX/
