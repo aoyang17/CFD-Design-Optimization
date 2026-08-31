@@ -1,0 +1,17 @@
+{
+  "case_name": "Multifidelity_Operation-aware CRM v1",
+  "asset_manifest": "crm-v1",
+  "assets": {
+    "ffd": "crm_ffd",
+    "modes": "crm_modes",
+    "bounds": "crm_bounds_multifidelity"
+  },
+  "operation": {
+    "representative_points_source": "clustering",
+    "weighting": "cluster_probability"
+  },
+  "optimization": {
+    "parameterization": "mode",
+    "fidelity": "multifidelity"
+  }
+}

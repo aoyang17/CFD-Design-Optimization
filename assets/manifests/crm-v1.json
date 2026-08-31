@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "name": "crm-v1",
+  "storage_subdirectory": "crm-v1",
+  "assets": {
+    "crm_ffd": {
+      "relative_path": "geometry/rot.xyz",
+      "sha256": "8a2c8095050c5c9665c59373643934e7252dc719a97f1b7a743f55e3ea2ebd31",
+      "description": "CRM FFD definition"
+    },
+    "crm_modes": {
+      "relative_path": "geometry/modes.dat",
+      "sha256": "a579994b6d4b0b4469c86afbbba641dbd30ee58c2ba3a0a336edaf58b68e72d0",
+      "description": "CRM modal geometry basis"
+    },
+    "crm_bounds_standard": {
+      "relative_path": "geometry/bounds_standard.txt",
+      "sha256": "0ce9de35218ffdc569fbabd1837649407c66fe5fd6b5481a2228738facf09606",
+      "description": "Standard CRM modal design-variable bounds"
+    },
+    "crm_bounds_multifidelity": {
+      "relative_path": "geometry/bounds_multifidelity.txt",
+      "sha256": "092b97009be2f369365862021e9f2b72e3b119d39b7cece2bbf0d1f99ba90fe3",
+      "description": "Multifidelity CRM modal bounds; differs from standard bound at one mode"
+    }
+  }
+}

@@ -21,4 +21,4 @@ The end-to-end implementation belongs in [`main_cases/Multifidelity_Operation-aw
 
 This first commit establishes a clean structure, provenance, asset policy, and Tecplot resources. It deliberately does not claim that legacy scripts are immediately runnable: their hard-coded paths and MACH-Aero-version assumptions must be ported case by case.
 
-See [`docs/migration-plan.md`](docs/migration-plan.md) for the staged migration plan and [`assets/manifests/crm-assets.md`](assets/manifests/crm-assets.md) for the canonical CRM assets.
+See [`docs/migration-plan.md`](docs/migration-plan.md) for the staged migration plan, [`docs/assets.md`](docs/assets.md) for setup and use, and [`assets/manifests/crm-v1.json`](assets/manifests/crm-v1.json) for the canonical CRM asset registry.

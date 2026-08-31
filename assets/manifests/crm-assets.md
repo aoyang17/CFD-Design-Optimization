@@ -1,6 +1,6 @@
 # Canonical CRM assets
 
-The following files occur as identical copies across the predecessor repositories. This repository will maintain one authoritative copy per asset after data storage is selected; no large asset is copied in this initial commit.
+The following files occur as identical copies across the predecessor repositories. The `crm-v1` manifest is the authoritative registry. Its first four small geometry assets reside beneath Aobo's external asset root; large assets are intentionally not copied into Git.
 
 | Asset | Role | Seen in |
 | --- | --- | --- |
@@ -12,6 +12,7 @@ The following files occur as identical copies across the predecessor repositorie
 
 ## Storage policy
 
-- Small, redistributable input files may be tracked beneath `assets/CRM/`.
+- The first canonical files are installed below `/mnt/data2/aobo/CFD-Design-Optimization/assets/crm-v1/geometry/`; their paths and checksums are in `crm-v1.json`.
+- Small, redistributable input files may be tracked beneath `assets/CRM/` when a portable Git copy is specifically needed.
 - Large datasets, CGNS meshes, and model checkpoints belong in durable storage outside Git and are referenced by a versioned manifest containing path/URI, checksum, source, license or access restriction, and intended case.
 - Generated CFD data, optimization histories, rendered images, and model-training outputs must never be committed.
